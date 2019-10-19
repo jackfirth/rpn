@@ -66,7 +66,7 @@
     (make-constructor-style-printer
      (λ (_) type-name)
      (λ (this) (reverse (accessor this 0)))))
-  (list (cons prop:equal+hash (make-record-equal+hash descriptor))
+  (list (cons prop:equal+hash (default-record-equal+hash descriptor))
         (cons prop:custom-write custom-write)))
 
 (define-record-type rpn-stack (backing-list)
